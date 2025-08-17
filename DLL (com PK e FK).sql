@@ -17242,4 +17242,5 @@ INSERT INTO movimento_historico (data_movimento, cod_produto, qtde_movimento, ti
 INSERT INTO movimento_historico (data_movimento, cod_produto, qtde_movimento, tipo_movimentacao) VALUES('2025-02-09', 25, 4, 'SAIDA');
 INSERT INTO movimento_historico (data_movimento, cod_produto, qtde_movimento, tipo_movimentacao) VALUES('2025-02-09', 26, 1, 'SAIDA');
 INSERT INTO movimento_historico (data_movimento, cod_produto, qtde_movimento, tipo_movimentacao) VALUES('2025-02-09', 31, 10, 'SAIDA');
+
 INSERT INTO movimento_historico (data_movimento, cod_produto, qtde_movimento, tipo_movimentacao) VALUES('2025-02-09', 32, 6, 'SAIDA');
