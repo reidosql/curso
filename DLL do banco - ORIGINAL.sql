@@ -22,8 +22,6 @@ CREATE TABLE faixas_cep (
 	cod_cidade integer,
 	estado varchar(2) NULL
 );
-CREATE UNIQUE INDEX faixascep_codcidade_idx ON faixas_cep(cod_cidade);
-CREATE UNIQUE INDEX faixascep_cepinicioefim_idx ON faixas_cep(cep_inicio,cep_fim);
 -----------
 CREATE TABLE grupo_produto (
     id serial,
@@ -57,7 +55,6 @@ CREATE TABLE produto_estoque (
 	estoque_minimo integer,
 	estoque_maximo integer
 );
-CREATE UNIQUE INDEX produtoestoque_codproduto_idx ON produto_estoque(cod_produto);
 ----------
 CREATE TABLE condicao_pagamento (
     id serial,
@@ -72,7 +69,6 @@ CREATE TABLE condicao_pagamento_dias (
 	numero_parcela integer,
 	dias integer
 );
-CREATE UNIQUE INDEX condpagdias_codcondicaoeparcela_idx ON condicao_pagamento_dias(cod_condicao,numero_parcela);
 -----------
 CREATE TABLE pedido (
     id serial,
@@ -95,7 +91,6 @@ CREATE TABLE pedido_itens (
 	preco_unitario numeric(13,2),
 	ordem integer
 );
-CREATE UNIQUE INDEX pedidoitens_pedidoecodproduto_idx ON pedido_itens(pedido,cod_produto);
 -----------
 CREATE TABLE calendario (
     id serial,
@@ -103,7 +98,6 @@ CREATE TABLE calendario (
 	dia_util varchar(1),
 	dia_semana varchar(7)
 );
-CREATE UNIQUE INDEX calendario_datano_idx ON calendario(data_ano);
 -----------
 CREATE TABLE movimento_historico (
     id serial,
@@ -17236,4 +17230,5 @@ INSERT INTO movimento_historico (data_movimento, cod_produto, qtde_movimento, ti
 INSERT INTO movimento_historico (data_movimento, cod_produto, qtde_movimento, tipo_movimentacao) VALUES('2025-02-09', 25, 4, 'SAIDA');
 INSERT INTO movimento_historico (data_movimento, cod_produto, qtde_movimento, tipo_movimentacao) VALUES('2025-02-09', 26, 1, 'SAIDA');
 INSERT INTO movimento_historico (data_movimento, cod_produto, qtde_movimento, tipo_movimentacao) VALUES('2025-02-09', 31, 10, 'SAIDA');
+
 INSERT INTO movimento_historico (data_movimento, cod_produto, qtde_movimento, tipo_movimentacao) VALUES('2025-02-09', 32, 6, 'SAIDA');
