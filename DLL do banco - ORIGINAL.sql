@@ -1,3 +1,4 @@
+--- DLL DO BANCO DE DADOS ORIGINAL (COM DIVERGÊNCIAS PROPOSITAIS, SEM PRIMARY KEYS E SEM FOREIGN KEYS)
 CREATE TABLE cliente (
     id serial,
 	cod_cliente integer,
@@ -17232,3 +17233,4 @@ INSERT INTO movimento_historico (data_movimento, cod_produto, qtde_movimento, ti
 INSERT INTO movimento_historico (data_movimento, cod_produto, qtde_movimento, tipo_movimentacao) VALUES('2025-02-09', 31, 10, 'SAIDA');
 
 INSERT INTO movimento_historico (data_movimento, cod_produto, qtde_movimento, tipo_movimentacao) VALUES('2025-02-09', 32, 6, 'SAIDA');
+
